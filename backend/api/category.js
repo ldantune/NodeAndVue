@@ -110,4 +110,4 @@ module.exports = app => {
     }
 
     return { save, remove, get, getById, getTree }
- }
+}
