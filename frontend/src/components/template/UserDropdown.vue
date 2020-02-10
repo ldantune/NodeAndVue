@@ -10,6 +10,7 @@
 
         <div class="user-dropdown-content">
             <router-link to="/admin" v-if="user.admin"><i class="fa fa-cogs"></i>Admnistração</router-link>
+            <router-link to="/custumer" v-if="user.admin"><i class="fa fa-cogs"></i>Cliente</router-link>
             <a href @click.prevent="logout"><i class="fa fa-sign-out"></i>Sair</a>
         </div>
     </div>
