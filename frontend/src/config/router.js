@@ -6,7 +6,7 @@ import AdminPages from '../components/admin/AdminPages'
 import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 import ArticleById from '@/components/article/ArticleById'
 import Auth from '@/components/auth/Auth'
-import AdminCustumer from '@/components/custumer/AdminCustumer'
+import ClienteAdmin from '@/components/cliente/ClienteAdmin'
 
 import { userKey } from '@/global'
 
@@ -34,9 +34,9 @@ const routes = [{
     path: '/auth',
     component: Auth
 }, {
-    name: 'adminCustumer',
-    path: '/custumer',
-    component: AdminCustumer
+    name: 'clienteAdmin',
+    path: '/cliente',
+    component: ClienteAdmin
 }]
 
 const router =new VueRouter({

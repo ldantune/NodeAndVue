@@ -5,16 +5,16 @@ module.exports = app => {
     app.post('/signin', app.api.auth.signin)
     app.post('/validateToken', app.api.auth.validateToken)
 
-    app.route('/custumers')
+    app.route('/clientes')
         .all(app.config.passport.authenticate())
-        .post(admin(app.api.custumer.save))
-        .get(admin(app.api.custumer.get))
+        .post(admin(app.api.cliente.save))
+        .get(admin(app.api.cliente.get))
 
-    app.route('/custumers/:id')
+    app.route('/clientes/:id')
         .all(app.config.passport.authenticate())
-        .put(admin(app.api.custumer.save))
-        .get(admin(app.api.custumer.getById))
-        .delete(admin(app.api.custumer.remove))
+        .put(admin(app.api.cliente.save))
+        .get(admin(app.api.cliente.getById))
+        .delete(admin(app.api.cliente.remove))
 
     app.route('/users')
         .all(app.config.passport.authenticate())

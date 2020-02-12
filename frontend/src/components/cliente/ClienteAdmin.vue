@@ -7,7 +7,7 @@
             <b-card no-body>
                 <b-tabs card>
                     <b-tab title="Cliente" active>
-                        <Custumer/>
+                        <Cliente/>
                     </b-tab>
                 </b-tabs>
             </b-card>
@@ -17,10 +17,10 @@
 
 <script>
     import PageTitle from '../template/PageTitle'
-    import Custumer from '../custumer/Custumer'
+    import Cliente from '../cliente/Cliente'
 export default {
-    name: 'AdminCustumer',
-    components: {PageTitle, Custumer}
+    name: 'ClienteAdmin',
+    components: {PageTitle, Cliente}
 }
 </script>
 

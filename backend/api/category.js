@@ -16,6 +16,7 @@ module.exports = app => {
             return res.status(400).send(msg)
         }
 
+        
         if(category.id) {
             app.db('categories')
                 .update(category)
