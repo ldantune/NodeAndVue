@@ -19,17 +19,26 @@
       <b-row>
         <b-col md="4" sm="12">
           <b-form-group label="Nome Fantasia:" label-for="cliente-nomeFantasia">
-            <b-form-input id="cliente-nomeFantasia" type="text" v-model="cliente.nomeFantasia" required :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-nomeFantasia" type="text" 
+              v-model="cliente.nomeFantasia" 
+              required :readonly="mode ==='remove'" 
+              placeholder="Informe o Nome Fantasia da empresa..."/>
           </b-form-group>
         </b-col>
         <b-col md="4" sm="12">
           <b-form-group label="Nome Empresa:" label-for="cliente-nomeEmpresa">
-            <b-form-input id="cliente-nomeEmpresa" type="text" v-model="cliente.nomeEmpresa" required :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-nomeEmpresa" 
+              type="text" v-model="cliente.nomeEmpresa" 
+              required :readonly="mode ==='remove'" 
+              placeholder="Informe o Nome da Empresa..."/>
           </b-form-group>
         </b-col>
         <b-col md="4" sm="12">
           <b-form-group label="E-mail:" label-for="cliente-email">
-            <b-form-input id="cliente-email" type="text" v-model="cliente.email" required :readonly="mode ==='remove'" placeholder="Informe o E-mail do Usuário..."/>
+            <b-form-input id="cliente-email" 
+              type="text" v-model="cliente.email" 
+              required :readonly="mode ==='remove'" 
+              placeholder="Informe o E-mail do Usuário..."/>
           </b-form-group>
         </b-col>
       </b-row>
@@ -38,23 +47,31 @@
       <b-row>
         <b-col md="3" sm="12">
           <b-form-group label="CNPJ:" label-for="cliente-cnpj">
-            <b-form-input id="cliente-cnpj" type="number" v-model="cliente.cnpj" :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-cnpj" 
+              type="number" v-model="cliente.cnpj" 
+              :readonly="mode ==='remove'" 
+              placeholder="Informe o CNPJ..."/>
           </b-form-group>
         </b-col>
         <b-col md="3" sm="12">
           <b-form-group label="CPF:" label-for="cliente-cpf">
-            <b-form-input id="cliente-cpf" type="number" v-model="cliente.cpf" required :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-cpf" type="number" 
+              v-model="cliente.cpf" required 
+              :readonly="mode ==='remove'" 
+              placeholder="Informe o CPF..."/>
           </b-form-group>
         </b-col>
         <b-col md="3" sm="12">
           <b-form-group label="Inscrição Estadual:" label-for="cliente-inscricaoEstadual">
-            <b-form-input id="cliente-inscricaoEstadual" type="number" v-model="cliente.inscricaoEstadual" required :readonly="mode ==='remove'" placeholder="Informe o E-mail do Usuário..."/>
+            <b-form-input id="cliente-inscricaoEstadual" 
+              type="number" v-model="cliente.inscricaoEstadual" 
+              required :readonly="mode ==='remove'" 
+              placeholder="Informe a Inscrição Estadual..."/>
           </b-form-group>
         </b-col>
         <b-col md="3" sm="12">
             <b-form-group label="ISENTO?" label-for="cliente-isento">
                 <b-form-checkbox id="isento" v-model="cliente.isento" name="isento">
-                    
                 </b-form-checkbox>
             </b-form-group>
         </b-col>
@@ -64,17 +81,24 @@
       <b-row>
         <b-col md="4" sm="12">
           <b-form-group label="Responsavel:" label-for="cliente-responsavel">
-            <b-form-input id="cliente-responsavel" type="text" v-model="cliente.responsavel" required :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-responsavel" 
+              type="text" v-model="cliente.responsavel" 
+              required :readonly="mode ==='remove'" 
+              placeholder="Informe o Responsável..."/>
           </b-form-group>
         </b-col>
         <b-col md="4" sm="12">
           <b-form-group label="Telefone:" label-for="cliente-telefoneComercial">
-            <b-form-input id="cliente-telefoneComercial" type="number" v-model="cliente.telefoneComercial" required :readonly="mode ==='remove'" placeholder="Informe o Nome do Usuário..."/>
+            <b-form-input id="cliente-telefoneComercial" 
+              type="number" v-model="cliente.telefoneComercial" 
+              required :readonly="mode ==='remove'" />
           </b-form-group>
         </b-col>
         <b-col md="4" sm="12">
           <b-form-group label="Celular:" label-for="cliente-celular">
-            <b-form-input id="cliente-celular" type="number" v-model="cliente.celular" required :readonly="mode ==='remove'" placeholder="Informe o E-mail do Usuário..."/>
+            <b-form-input id="cliente-celular" type="number" 
+              v-model="cliente.celular" 
+              required :readonly="mode ==='remove'"/>
           </b-form-group>
         </b-col>
       </b-row>
@@ -82,7 +106,6 @@
         <b-col md="12" sm="12">
             <b-form-textarea id="textarea"
                 v-model="cliente.observacao"
-                placeholder="Enter something..."
                 rows="3"
                 max-rows="6">
             </b-form-textarea>
@@ -132,8 +155,8 @@ export default {
         selected: null,
         ct: [
             {value: null, text: 'Selecione uma opção'},
-            {value: 'J', text: 'Juridica'},
-            {value: 'F', text: 'Fisica'},
+            {value: 'J', text: 'Jurídica'},
+            {value: 'F', text: 'Física'},
         ],
         sc: [
             {value: true, text: 'Ativo'},
@@ -141,7 +164,8 @@ export default {
         ],
         observacao: '',
         celular: 0,
-        isento: false
+        isento: false,
+        telefoneComercial: 0
       }
     },
     methods: {
